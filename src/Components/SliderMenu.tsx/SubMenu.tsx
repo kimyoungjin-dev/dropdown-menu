@@ -44,10 +44,10 @@ export default function SubMenu({ item }: IProps) {
         </div>
 
         <div>
-          {item.subNav && subNav
-            ? item.iconOpened
-            : item.subNav
-            ? item.iconClosed
+          {item.subNav && subNav //A조건
+            ? item.iconOpened //A조건이 참이라면 실행
+            : item.subNav //B조건
+            ? item.iconClosed //A가 틀렸을때 B조건 참이라면 실행 //둘다아닐경우 null실생
             : null}
         </div>
       </Container>
