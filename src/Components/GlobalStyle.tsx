@@ -13,9 +13,7 @@ const globalStyles = createGlobalStyle`
     .home,
     .reports,
     .products,
-    .team,
-    .reports,
-    .home {
+    .team {
         display:flex;
         height:90vh;
         align-items:center;
