@@ -10,6 +10,19 @@ const globalStyles = createGlobalStyle`
         margin:0;
     }
 
+    .home,
+    .reports,
+    .products,
+    .team,
+    .reports,
+    .home {
+        display:flex;
+        height:90vh;
+        align-items:center;
+        justify-content:center;
+        font-size:100px;
+    }
+
     a{
         text-decoration:none;
         color:inherit;
