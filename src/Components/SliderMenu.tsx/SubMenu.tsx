@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { IProps } from "./InterFace";
+import { IProps, ItemProps } from "./InterFace";
 
 const Container = styled(Link)`
   display: flex;
@@ -35,6 +35,19 @@ export default function SubMenu({ item }: IProps) {
   const [subNav, setSubNav] = useState(false);
   const toggleSubNav = () => setSubNav((prev) => !prev);
 
+  const checkSubNav = (item: ItemProps) => {
+    const { iconClosed, iconOpened } = item;
+    //subNav 존재 ? 아래화살표 : 위화살표
+    if (subNav) {
+      return iconOpened;
+    }
+    if (!subNav) {
+      return iconClosed;
+    } else {
+      return null;
+    }
+  };
+
   return (
     <>
       <Container to={item.path} onClick={item.subNav && toggleSubNav}>
@@ -43,13 +56,7 @@ export default function SubMenu({ item }: IProps) {
           <Label>{item.title}</Label>
         </div>
 
-        <div>
-          {item.subNav && subNav //A조건
-            ? item.iconOpened //A조건이 참이라면 실행
-            : item.subNav //B조건
-            ? item.iconClosed //A가 틀렸을때 B조건 참이라면 실행 //둘다아닐경우 null실생
-            : null}
-        </div>
+        <div>{item.subNav ? checkSubNav(item) : null}</div>
       </Container>
       {subNav &&
         item.subNav?.map((item, index) => (
