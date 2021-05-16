@@ -1,10 +1,10 @@
-interface SubNavProps {
+export interface SubNavProps {
   title: string;
   path: string;
   icon: JSX.Element;
 }
 
-interface ItemProps {
+export interface ItemProps {
   title: string;
   path: string;
   icon: JSX.Element;
