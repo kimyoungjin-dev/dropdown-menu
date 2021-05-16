@@ -1,6 +1,6 @@
 export const Messages = () => {
   return (
-    <div>
+    <div className="messages">
       <h1>Messages</h1>
     </div>
   );
@@ -8,7 +8,7 @@ export const Messages = () => {
 
 export const Messages1 = () => {
   return (
-    <div>
+    <div className="messages">
       <h1>Messages1</h1>
     </div>
   );
@@ -16,7 +16,7 @@ export const Messages1 = () => {
 
 export const Messages2 = () => {
   return (
-    <div>
+    <div className="messages">
       <h1>Messages2</h1>
     </div>
   );
