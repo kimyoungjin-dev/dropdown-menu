@@ -13,6 +13,8 @@ const globalStyles = createGlobalStyle`
     .home,
     .reports,
     .products,
+    .messages,
+    .support,
     .team {
         display:flex;
         height:90vh;
